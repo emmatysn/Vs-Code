@@ -1,0 +1,413 @@
+
+/* STYLE GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #151515;
+    color: #F2EFE8;
+    font-family: Arial, sans-serif;
+}
+
+/* BARRE DE NAVIGATION */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    border-bottom: 1px solid #333333;
+}
+
+.logo {
+    color: #F2EFE8;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #C99A4A;
+}
+
+nav a {
+    color: #F2EFE8;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #C99A4A;
+}
+
+/* PAGE D'ACCUEIL */
+
+.accueil {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.sous-titre {
+    color: #C99A4A;
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: 55px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+h1 span {
+    color: #C99A4A;
+}
+
+.description {
+    color: #BDBDBD;
+    max-width: 550px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+/* BOUTON */
+
+.bouton {
+    background-color: #C99A4A;
+    color: #151515;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.bouton:hover {
+    background-color: #E2B968;
+    transform: scale(1.05);
+}
+
+/* PIED DE PAGE */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid #333333;
+    color: #888888;
+    font-size: 12px;
+}
+
+/* ADAPTATION AUX TELEPHONES */
+
+@media screen and (max-width: 650px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav a {
+        margin: 0 8px;
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+}
+
+/* PAGE DES CATEGORIES */
+
+.categories {
+    max-width: 1100px;
+    margin: 70px auto;
+    padding: 0 25px;
+    text-align: center;
+}
+
+.categories h1 {
+    font-size: 38px;
+    color: #C99A4A;
+    margin-bottom: 15px;
+}
+
+.categories > p {
+    color: #F2EFE8;
+    font-size: 17px;
+    margin-bottom: 45px;
+}
+
+.grille-categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.carte {
+    background-color: #242424;
+    border: 1px solid #454545;
+    border-radius: 12px;
+    padding: 35px 20px;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.carte h2 {
+    color: #C99A4A;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.carte p {
+    color: #F2EFE8;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.carte:hover {
+    transform: translateY(-7px);
+    border-color: #C99A4A;
+    background-color: #303030;
+}
+
+/* ADAPTATION AUX PETITS ECRANS */
+
+@media screen and (max-width: 750px) {
+    .grille-categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .grille-categories {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* CENTRER LA DERNIERE CATEGORIE */
+
+.carte:last-child {
+    grid-column: 2;
+}
+
+/* PAGE DES QUIZ */
+
+.page-quiz {
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.retour {
+    color: #C99A4A;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.page-quiz h1 {
+    color: #C99A4A;
+    font-size: 38px;
+    text-align: center;
+}
+
+.intro-quiz {
+    text-align: center;
+    color: #F2EFE8;
+    margin: 15px 0 30px;
+}
+
+.niveau {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    color: #C99A4A;
+    margin-bottom: 35px;
+}
+
+.question {
+    background-color: #242424;
+    border: 1px solid #454545;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+.question h2 {
+    color: #F2EFE8;
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+
+.question label {
+    display: block;
+    color: #ddd;
+    margin: 12px 0;
+    cursor: pointer;
+}
+
+.question input {
+    accent-color: #C99A4A;
+    margin-right: 10px;
+}
+
+.quiz button {
+    display: block;
+    margin: 30px auto;
+    padding: 13px 25px;
+    background-color: #C99A4A;
+    color: #151515;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.quiz button:hover {
+    background-color: #e0b96f;
+}
+
+/* CORRECTIONS DU QUIZ */
+
+.correction {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #454545;
+    color: #F2EFE8;
+}
+
+.correction summary {
+    color: #C99A4A;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.correction p {
+    margin-top: 12px;
+    line-height: 1.5;
+}
+
+/* FIN DU QUIZ */
+.fin-quiz {
+    text-align: center;
+    background-color: #242424;
+    border: 1px solid #454545;
+    border-radius: 12px;
+    padding: 35px 25px;
+    margin: 40px auto;
+}
+
+.fin-quiz h2 {
+    color: #C99A4A;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.fin-quiz p {
+    color: #F2EFE8;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.bouton-fin {
+    display: inline-block;
+    background-color: #C99A4A;
+    color: #151515;
+    text-decoration: none;
+    padding: 13px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.bouton-fin:hover {
+    background-color: #E0B76D;
+    transform: translateY(-3px);
+}
+
+/* PAGE DE CHOIX DES NIVEAUX */
+.choix-niveau {
+    max-width: 1100px;
+    margin: 70px auto;
+    padding: 0 25px;
+    text-align: center;
+}
+
+.choix-niveau h1 {
+    color: #C99A4A;
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.choix-niveau > p {
+    color: #F2EFE8;
+    font-size: 17px;
+    margin-bottom: 45px;
+}
+
+.grille-niveaux {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.carte-niveau {
+    background-color: #242424;
+    border: 1px solid #454545;
+    border-radius: 12px;
+    padding: 35px 20px;
+    min-height: 170px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.carte-niveau h2 {
+    color: #C99A4A;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.carte-niveau p {
+    color: #F2EFE8;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.carte-niveau span {
+    color: #C99A4A;
+    font-weight: bold;
+}
+
+.carte-niveau:hover {
+    transform: translateY(-7px);
+    border-color: #C99A4A;
+    background-color: #303030;
+}
+
+@media screen and (max-width: 750px) {
+    .grille-niveaux {
+        grid-template-columns: 1fr;
+    }
+}
